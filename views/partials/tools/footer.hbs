@@ -1,0 +1,93 @@
+<footer class="nav-tools-footer header--custom-background">
+  <section class="nav-tools-footer__bound header--custom-background">
+    <section class="nav-tools-footer__top">
+      <div class="nav-tools-footer__info header--custom-text">
+        <div class="nav-tools-footer__logo">
+          {{#if logo}}
+            <img src="{{logo}}" alt="{{name}}">
+          {{else}}
+            <span class="header--custom-text">
+              {{name}}
+            </span>
+          {{/if}}
+        </div>
+      </div>
+      <div data-editable="contact" class="contenedor-categorias">
+        <p>Categorías</p>
+        <div>
+          <a href="/listado/hogar-muebles-jardin/seguridad-hogar/sistemas-monitoreo/camaras-seguridad/kits#applied_filter_id%3Dcategory%26applied_filter_name%3DCategor%C3%ADas%26applied_filter_order%3D3%26applied_value_id%3DMLA5959%26applied_value_name%3DC%C3%A1maras+de+Seguridad%26applied_value_order%3D1%26applied_value_results%3D268%26is_custom%3Dfalse">Cámaras</a>
+          <a href="/listado/hogar-muebles-jardin/seguridad-hogar/sistemas-monitoreo/kits-seguridad/kits#applied_filter_id%3Dcategory%26applied_filter_name%3DCategor%C3%ADas%26applied_filter_order%3D3%26applied_value_id%3DMLA417835%26applied_value_name%3DKits+de+Seguridad%26applied_value_order%3D2%26applied_value_results%3D501%26is_custom%3Dfalse">Kits de seguridad</a>
+          <a href="/listado/hogar-muebles-jardin/seguridad-hogar/sistemas-monitoreo/grabadores-dvr/dvrs#applied_filter_id%3Dcategory%26applied_filter_name%3DCategor%C3%ADas%26applied_filter_order%3D3%26applied_value_id%3DMLA420038%26applied_value_name%3DGrabadores+DVR%26applied_value_order%3D2%26applied_value_results%3D15%26is_custom%3Dfalse">DVRS</a>
+          <a href="/controles-de-acceso">Controles de acceso</a>
+          <a href="/listado/electronica-audio-video/">Accesorios</a>
+        </div>
+      </div>
+      <div data-editable="contact" class="contenedor-contacto">
+        <p>Contacto</p>
+        <div>
+          {{#if showContact}}
+            {{#if showPhone}}
+              <a href="tel:{{phone.formatted}}">{{phone.formatted}}</a>
+            {{/if}}
+            {{#if showEmail}}
+              <a href="mailto:{{email}}">{{email}}</a>
+            {{/if}}
+            {{#if address}}
+              {{#with address}}
+                <a target="_blank" href="https://goo.gl/maps/PtXKQf2VDvRQEFyr9">
+                  <span itemprop="streetAddress">{{address}}</span>
+                  <span itemprop="addressLocality">{{city}}</span>
+                  <br>
+                  <span itemprop="addressRegion">{{state}}</span>
+                </a>
+              {{/with}}
+            {{/if}}
+          {{/if}}
+        </div>
+      </div>
+      <div data-editable="contact" class="contenedor-redes">
+        <p>Redes Sociales</p>
+        <div>
+          <a target="_blank" href="https://www.facebook.com/m3karg">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733603.png" alt="logo-facebook">
+          </a>
+          <a target="_blank" href="https://www.instagram.com/m3k_argentina/">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="logo-instagram">
+          </a>
+          <a target="_blank" href="https://www.youtube.com/channel/UCEXQm7WC2S8a8GqFQN198TA">
+            <img src="https://cdn-icons-png.flaticon.com/512/717/717426.png" alt="logo-youtube">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="nav-tools-footer__bottom header--custom-border">
+      <div>
+        <div class="nav-footer-about">
+          <a href="{{{linkToMShopsLandingPage}}}" target="_blank">{{i18n.powered_by}}</a>
+          {{#if linkToLegalNotices}}
+            <a href="{{linkToLegalNotices.href}}">{{linkToLegalNotices.label}}</a>
+          {{/if}}
+          {{#if linkToLGPD}}
+            <a href="{{linkToLGPD.href}}">{{linkToLGPD.label}}</a>
+          {{/if}}
+        </div>
+
+        {{#if showBusinessData}}
+          {{#with fiscalData}}
+            <div class="nav-footer-fiscal-data">
+              <p class="nav-footer-fiscal-data__name">{{legal_name}}</p>
+              <p class="nav-footer-fiscal-data__id">{{legal_doc}}</p>
+            </div>
+          {{/with}}
+        {{/if}}
+      </div>
+      {{#if showQrData}}
+        {{#with fiscalData}}
+          <a href={{qr_link}} target="_F960AFIPInfo">
+            <img class="nav-footer-afip-img" src={{qr_img}} alt="Data fiscal" />
+          </a>
+        {{/with}}
+      {{/if}}
+    </section>
+  </section>
+</footer>
