@@ -1,6 +1,9 @@
 flecha = document.querySelectorAll(".category-arrow-container .flecha-desplegable");
 subcategorias = document.querySelectorAll(".subcategorias");
 
+let favicon = document.querySelector("link[rel='shortcut icon']")
+favicon.href = 'https://iili.io/Hu2lrxV.png';
+
 flecha[0].addEventListener("click", function () {
   flecha[0].classList.toggle("rotate");
   subcategorias[0].classList.toggle("invisible");
