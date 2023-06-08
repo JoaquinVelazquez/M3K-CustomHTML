@@ -1,8 +1,22 @@
 flecha = document.querySelectorAll(".category-arrow-container .flecha-desplegable");
 subcategorias = document.querySelectorAll(".subcategorias");
 
-let favicon = document.querySelector("link[rel='shortcut icon']")
-favicon.href = 'https://iili.io/Hu2lrxV.png';
+(function() {
+  let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  link.href = 'https://iili.io/Hu2lrxV.png';
+  document.getElementsByTagName('head')[0].appendChild(link);
+})();
+function faviconIn(){
+  let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/x-icon';link.rel = 'shortcut icon';
+  link.href = 'https://iili.io/Hu2lrxV.png';
+  document.getElementsByTagName('head')[0].appendChild(link)
+};
+
+setTimeout(faviconIn,1000);
+
 
 flecha[0].addEventListener("click", function () {
   flecha[0].classList.toggle("rotate");

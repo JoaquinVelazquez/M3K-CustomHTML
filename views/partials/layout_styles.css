@@ -1339,9 +1339,6 @@ header .nav-tools-header__categories {
   .nav-footer-about {
     flex-direction: column;
   }
-  .nav-footer-about p {
-    order: 1;
-  }
   .nav-footer-about p,
   .nav-footer-about a,
   .nav-footer-about
